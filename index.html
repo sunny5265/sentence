@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Basic tools</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <nav class="navbar bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Basic tools</a>
+      </div>
+    </nav>
+
+    <div class="container my-5">
+      <h1>Basic Character Counter Count</h1>
+      <p class="my-3">
+        A character counter is a software tool that counts the number of
+        characters in a given body of text. This can be useful for a variety of
+        purposes, such as determining the length of a text document or assessing
+        the amount of text in a given language. There are a number of different
+        ways to count characters, and character counters can vary in their level
+        of sophistication. Some character counters simply count every character
+        in a text, including spaces, punctuation, and other non-letter
+        characters. Others may exclude certain characters from the count. Still
+        others may provide more detailed counts, such as the number of letters,
+        words, or sentences in a text.
+      </p>
+      <div class="col-md-12">
+        <input
+          type="text"
+          id="text-input"
+          placeholder="Type something here"
+          class="form-control py-5"
+        />
+        <div id="char-count" class="badge bg-secondary my-4"></div>
+      </div>
+      <h2 class="my-3">What is a character counter?</h2>
+      <p>
+        A character counter is a tool that helps you count the number of
+        characters in a given piece of text. This can be useful for a variety of
+        reasons, such as making sure your text meets the character limit for a
+        particular application or social media platform. There are a few
+        different ways to go about counting characters. One popular method is to
+        simply use the built-in character counter feature in your word
+        processing software. This is typically found under the "Edit" menu, and
+        can give you a quick and easy way to see how many characters are in your
+        document. Another option is to use an online character counter tool.
+        These can be found with a quick search, and can be very helpful if
+        you're working with a large amount of text. Simply paste your text into
+        the tool and it will give you an accurate character count. Finally, you
+        can always count characters by hand. This can be a bit tedious, but it's
+        certainly doable if you need an exact character count for some reason.
+        Simply take a look at your text and count each character, including
+        spaces. No matter which method you use, character counting is a quick
+        and easy way to get the information you need. So next time you need to
+        know how many characters are in your text, be sure to use a character
+        counter!
+      </p>
+      <p class="my-2 fs-4">More Advanced Go here</p>
+      <a class="btn btn-primary" href="https://sentence-counter.com/">
+        Sentence Counter
+      </a>
+    </div>
+    <!--footer-->
+    <script>
+      function countCharacters() {
+        var textInput = document.getElementById("text-input");
+        var charCount = document.getElementById("char-count");
+        charCount.innerText = textInput.value.length;
+      }
+      var textInput = document.getElementById("text-input");
+      textInput.addEventListener("input", countCharacters);
+    </script>
+    <script src="js/wordCount.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
